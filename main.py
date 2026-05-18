@@ -7,9 +7,26 @@ import Stock_Dashboard
 from streamlit_marquee import streamlit_marquee
 st.set_page_config(page_title="NSE/BSE Live Dashboard", layout="wide")
 st.title("Indian Stock Market Live Dashboard")
-streamlit_marquee(**{
-        'background':"#F4D03F",'color':"#000000",'font-size':'15px','width':'100%','lineHeight':'15px','animationDuration':'45s',
-        'content':"DESCLAIMER : Information shared through project,media platforms and any activites is intended for educational and awareness purpose only.Investments in securities markets are subject to market risks. Investors should elevate their financial objectives and risk appetite before making investment decisions."})
+
+st.markdown(
+    """
+    <div style="
+        background-color:#FFFDE7;
+        color:#000000;
+        font-size:15px;
+        line-height:20px;
+        width:100%;
+        padding:8px;
+        text-align:center;
+        font-weight:bold;">
+        ⚠️ Disclaimer: For awareness use only.  
+        Investments in securities markets are subject to market risks.  
+        Review your goals before investing.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 def fetch_tickers(exchange, index_name):
     headers = {'User-Agent': 'Mozilla/5.0'}
     if exchange == "NSE":
