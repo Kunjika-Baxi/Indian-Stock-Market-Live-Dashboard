@@ -4,7 +4,7 @@ import streamlit as st
 import requests
 import io
 import Stock_Dashboard
-from streamlit_marquee import streamlit_marquee
+
 st.set_page_config(page_title="NSE/BSE Live Dashboard", layout="wide")
 st.title("Indian Stock Market Live Dashboard")
 
